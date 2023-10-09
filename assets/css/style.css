@@ -77,7 +77,7 @@ aside .col-space{
     margin-bottom: 7px;
 }
 .feature div img{
-    width:400px;
+    width:100%;
     height:250px;
 }
 .feature div p{
@@ -121,6 +121,7 @@ aside .col-space{
 .service{
     width:100%;
     height:auto;
+    /* padding: 0px 27px; */
     /* padding:0px 30px; */
 }
 .service .upper, .service .lower{
@@ -128,14 +129,22 @@ aside .col-space{
     align-items: center;
 }
 
+.service .upper .content{
+   padding: 0px 27px;
+}
+
+.service .lower .content{
+    padding: 0px 27px;
+ }
+
 .service .image,
 .service .content{
     width:50%;
 }
 
 .service .image img{
-    width:660px;
-    height:500px;
+    width:100%;
+    height:400px;
 }
 
 .footer {   
@@ -153,22 +162,34 @@ aside .col-space{
    }
 
 
-   @media screen and (max-width:992px),(min-width:992px){
+   @media screen and (max-width:992px){
         .header{
             width: 100%;
-            /* height:170px; */
+            height:100px;
             padding: 10px;
         }
         .header h2{
-            font-size: 80px;
+            display: block;
+            font-size: 30px;
+        }
+        .header h2 span{
+            display:block;
         }
         .banner{
-            padding:10px;    
+            padding:10px; 
         }
         
+        .banner h1{
+            font-size:42px;
+            padding-left: 20px;
+        }
+        .banner h1 span{
+            font-size: 65px; 
+        }
         .feature{
             width:100%;
-            padding:10px 0px;
+            height: 536px;
+            padding: 22px 27px;
          /* justify-content: space-between; */
         }
         .feature div{
@@ -176,7 +197,7 @@ aside .col-space{
                 height:500px;
         }
         .feature div h2{
-            font-size: 20px;
+            font-size: 30px;
         }
    
         .feature div img{
@@ -203,16 +224,137 @@ aside .col-space{
             width:50%;
         }
 
-        .service .upper .content,.service .lower .content{
-            margin-left: 20px;
+        .service .upper .content{
+            /* margin-left: 20px; */
+        }
+
+        .service .lower .content{
+            /* margin-left: 20px; */
         }
         
         .service .image img{
-            width:500px;
-            height:350px;
+            width:100%;
+            height:auto;
         }
 
     } 
+
+    @media screen and (max-width:768px){
+        .header{
+            width: 100%;
+            height:90px;
+            padding: 10px;
+        }
+        .header h2{
+            display: block;
+            font-size: 20px;
+        }
+        .header h2 span{
+            display:block;
+        }
+        .banner{
+            height:auto;
+            padding:10px;
+            display:flex;
+            flex-direction: column;
+        }
+        .banner h1{
+            font-size: 27px;
+            text-align: center;
+            margin: 15px 0px;
+        }
+        .banner h1 span{
+            font-size: 50px;
+        }
+        .feature{
+            height: 499px;
+            padding: 22px 27px;
+        }
+
+        .feature div{
+            width:30%;
+            
+        }
+        .feature div h2{
+            font-size: 20px;
+        }
+
+        .feature div img{
+            width:100%;
+            height: 189px;
+        }
+
+        .feature div p{
+            font-size: 17px;
+        }
+
+        .about{
+            padding: 59px 84px;
+        }
+        .about button{
+            margin-top: 26px;
+        }
+
+    }
+
+    @media screen and (max-width:576px){
+        .header{
+            width: 100%;
+            height:80px;
+            padding: 10px;
+        }
+        .header h2{
+            display: block;
+            font-size: 15px;
+        }
+        .header h2 span{
+            display:block;
+        }
+
+        .feature{
+            height: auto;
+            /* padding: 22px 20px; */
+            flex-direction: column;
+        }
+
+        .feature div{
+            width:100%;
+            height: auto;
+            padding: 15px 0px;
+        }
+        /* .feature div h2{
+            font-size: 20px;
+        } */
+
+        .feature div img{
+            width:100%;
+            height: auto;
+        }
+
+        .feature div p{
+            font-size: 17px;
+        }
+
+        .about{
+            padding: 24px 12px;
+        }
+        .about h2{
+            font-size:27px;
+        }
+        .about p{
+            font-size: 16px;
+        } 
+        
+            .service .image img{
+                height:auto;
+            }
+
+
+            .footer h2 {
+                font-size: 12px;
+                margin-bottom: 7px;
+            }
+    }
         
 
 
